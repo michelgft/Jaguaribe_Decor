@@ -35,10 +35,15 @@ button {
 /* Header */
 
 header {
-  background-color: #f1f1f1;
+  background-color: #f1f1f1; /* cor do site */
   position: sticky;
-  top: 0px;
-  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999; /* suficiente para ficar acima do conteúdo */
+  /* opcional: sombra sutil para separar do conteúdo */
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
 
 #logo img {
@@ -47,10 +52,10 @@ header {
 
 nav {
   position: relative;
-  top: 0px;
   max-width: 1140px;
-  margin: auto;
-  padding: 10px 0px;
+  margin: 0 auto; /* centraliza o conteúdo do nav */
+  padding: 10px 20px;
+  width: 100%;
 }
 nav ul {
   background-color: #f1f1f1;
@@ -97,6 +102,70 @@ nav a:hover {
 
 .app {
   cursor: pointer;
+}
+
+/* Categorias */
+.categorias {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.categorias h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: #132f28;
+}
+
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.categoria-card {
+    background-color: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.categoria-card:hover {
+    border-color: #1d9d74;
+    box-shadow: 0 4px 15px rgba(29, 157, 116, 0.2);
+    transform: translateY(-5px);
+}
+
+.categoria-card i {
+    font-size: 3rem;
+    color: #1d9d74;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.categoria-card h4 {
+    color: #132f28;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .categorias-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 425px) {
+    .categorias-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Seção Sobre */
