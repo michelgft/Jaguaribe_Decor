@@ -6,7 +6,7 @@ export const produtos = [
         preco: 380.00,
         precoOriginal: 450.00,
         categoria: "sala-de-estar",
-        imagem: "public/imagens/20.png",
+        imagem: "/imagens/20.png",
         descricao: "Luminária de mesa articulada com design moderno...",
         avaliacao: 3.5
     },
@@ -16,7 +16,7 @@ export const produtos = [
         preco: 99.00,
         precoOriginal: 150.00,
         categoria: "sala-de-estar",
-        imagem: "public/imagens/21.png",
+        imagem: "/imagens/21.png",
         descricao: "Relógio de parede moderno...",
         avaliacao: 3.5
     },
@@ -26,7 +26,7 @@ export const produtos = [
         preco: 150.00,
         precoOriginal: 200.00,
         categoria: "jardim", 
-        imagem: "public/imagens/06.png",
+        imagem: "/imagens/06.png",
         descricao: "Conjunto de vasos mini...",
         avaliacao: 3.5
     },
@@ -36,7 +36,7 @@ export const produtos = [
         preco: 120.00,
         precoOriginal: 150.00,
         categoria: "sala-de-estar",
-        imagem: "public/imagens/04.png",
+        imagem: "/imagens/04.png",
         descricao: "Quadro moderno para decoração...",
         avaliacao: 4.5
     },
@@ -46,7 +46,7 @@ export const produtos = [
         preco: 100.00, 
         precoOriginal: 140.00,
         categoria: "cozinha",
-        imagem: "public/imagens/05.png",
+        imagem: "/imagens/05.png",
         descricao: "Xícara de porcelana premium...",
         avaliacao: 4.5
     },
@@ -56,37 +56,37 @@ export const produtos = [
         preco: 135.00,
         precoOriginal: 180.00,
         categoria: "sala-de-estar",
-        imagem: "public/imagens/07.png",
+        imagem: "/imagens/07.png",
         descricao: "Globo decorativo para mesa...",
         avaliacao: 4.5
     },
     {
         id: 7,
-        nome: "Cama Casal Premium",
+        nome: "Cômoda premium",
         preco: 1200.00,
         precoOriginal: 1500.00,
         categoria: "quarto",
-        imagem: "public/imagens/18.png",
-        descricao: "Cama de casal premium com cabeceira estofada...",
+        imagem: "/imagens/18.png",
+        descricao: "Cômoda premium de madeira maciça...",
         avaliacao: 4.8
     },
     {
         id: 8,
-        nome: "Mesa de Centro",
+        nome: "Abajur de madeira",
         preco: 450.00,
         precoOriginal: 550.00,
         categoria: "sala-de-estar", 
-        imagem: "public/imagens/14.png",
-        descricao: "Mesa de centro moderna em madeira maciça...",
+        imagem: "/imagens/14.png",
+        descricao: "Abajur de madeira moderno de madeira maciça...",
         avaliacao: 4.6
     },
     {
         id: 9,
-        nome: "Jogo de Panelas",
+        nome: "Conjunto de Lustres",
         preco: 280.00,
         precoOriginal: 350.00,
         categoria: "cozinha",
-        imagem: "public/imagens/15.png",
+        imagem: "/imagens/15.png",
         descricao: "Jogo completo de panelas antiaderentes...",
         avaliacao: 4.7
     },
@@ -99,7 +99,400 @@ export const produtos = [
         imagem: "public/imagens/19.png",
         descricao: "Vaso decorativo grande para plantas...",
         avaliacao: 4.4
-    }
+    },
+    {
+        id: 11, 
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "cozinha",
+        imagem: "imagens/cozinha5.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 12,
+        nome: "Tábua decorativa de madeira",
+        preco: 90.00,
+        precoOriginal: 70.00,
+        categoria: "sala-de-estar",
+        imagem: "imagens/sala1.png",
+        descricao: "Tábua decorativa de madeira para mesa de centro...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 13,
+        nome: "Conjunto de almofadas",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "quarto",
+        imagem: "imagens/quarto1.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 14,
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "jardim",
+        imagem: "imagens/jardim1.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 15, 
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "cozinha",
+        imagem: "imagens/cozinha1.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 16,
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "cozinha",
+        imagem: "imagens/cozinha2.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 17, 
+        nome: "Conjunto de caixas decorativas",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "sala-de-estar",
+        imagem: "imagens/sala2.png",
+        descricao: "Conjunto de caixas decorativas de madeira, ferro...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 18, 
+        nome: "Espelho redondo de madeira",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "quarto",
+        imagem: "imagens/quarto2.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 19, 
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "jardim",
+        imagem: "imagens/jardim2.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 20, 
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "cozinha",
+        imagem: "imagens/cozinha3.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 21, 
+        nome: "Conjunto de porta velas",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "sala-de-estar",
+        imagem: "imagens/sala3.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 22, 
+        nome: "Porta jóias moderno",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "quarto",
+        imagem: "imagens/quarto3.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 23, 
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "jardim",
+        imagem: "imagens/jardim3.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 24, 
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "cozinha",
+        imagem: "imagens/cozinha4.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 25, 
+        nome: "Console de madeira",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "sala-de-estar",
+        imagem: "imagens/sala4.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 26, 
+        nome: "Relógio despertador minimalista",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "quarto",
+        imagem: "imagens/quarto4.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 27, 
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "jardim",
+        imagem: "imagens/jardim4.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 28, 
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "cozinha",
+        imagem: "imagens/cozinha6.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 29, 
+        nome: "Mesa de centro redonda",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "sala-de-estar",
+        imagem: "imagens/sala5.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 30, 
+        nome: "Puffs estofados em veludo",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "quarto",
+        imagem: "imagens/quarto5.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 31, 
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "jardim",
+        imagem: "imagens/jardim5.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 32,
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "cozinha",
+        imagem: "imagens/cozinha7.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 33, 
+        nome: "Relógio de parede de madeira",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "sala-de-estar",
+        imagem: "imagens/sala6.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 34,
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "quarto",
+        imagem: "imagens/quarto6.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 35, 
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "jardim",
+        imagem: "imagens/jardim6.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 36, 
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "cozinha",
+        imagem: "imagens/cozinha8.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+    { 
+        id: 37, 
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "sala-de-estar",
+        imagem: "imagens/sala7.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },    { 
+        id: 38, 
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "quarto",
+        imagem: "imagens/quarto7.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },    { 
+        id: 39, 
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "jardim",
+        imagem: "imagens/jardim7.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },    { 
+        id: 40, 
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "cozinha",
+        imagem: "imagens/cozinha9.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },    { 
+        id: 41, 
+        nome: "Vaso de cerâmica",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "sala-de-estar",
+        imagem: "imagens/sala8.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },    { 
+        id: 42, 
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "quarto",
+        imagem: "imagens/quarto8.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },    { 
+        id: 43, 
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "jardim",
+        imagem: "imagens/jardim8.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },    { 
+        id: 44, 
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "cozinha",
+        imagem: "imagens/cozinha10.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },    { 
+        id: 45, 
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "quarto",
+        imagem: "imagens/quarto9.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },    { 
+        id: 46, 
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "jardim",
+        imagem: "imagens/jardim9.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    }, 
+   { 
+        id: 47, 
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "quarto",
+        imagem: "imagens/quarto10.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+   { 
+        id: 48, 
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "jardim",
+        imagem: "imagens/jardim10.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+   { 
+        id: 49, 
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "quarto",
+        imagem: "imagens/quarto11.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+   { 
+        id: 50, 
+        nome: "Vaso de plantas suspenso",
+        preco: 280.00,
+        precoOriginal: 350.00,
+        categoria: "jardim",
+        imagem: "imagens/jardim11.png",
+        descricao: "Vaso de plantas suspenso no teto...",
+        avaliacao: 4.9
+    },
+
+
 ];
 
 
