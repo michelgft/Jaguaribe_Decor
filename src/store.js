@@ -516,7 +516,7 @@ export function mapearProdutosParaHTML(produtosArray) {
             <button class="btn-adicionar-carrinho" data-id="${produto.id}">
                 Adicionar ao Carrinho
             </button>
-            <a href="assets/pages/detalhe.html?id=${produto.id}" class="btn">Ver detalhes</a>
+            <a href="<a href="/detalhe.html?id=${produto.id}">" class="btn">Ver detalhes</a>
         </div>
     `).join('');
 }
