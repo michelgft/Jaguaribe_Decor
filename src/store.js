@@ -505,7 +505,7 @@ export function filtrarPorCategoria(categoria) {
 export function mapearProdutosParaHTML(produtosArray) {
     return produtosArray.map(produto => `
         <div class="produto-card">
-            <a href="assets/pages/detalhe.html?id=${produto.id}">
+            <a href="/detalhe.html?id=${produto.id}">
                 <img src="${produto.imagem}" alt="${produto.nome}">
             </a>
             <h3>${produto.nome}</h3>

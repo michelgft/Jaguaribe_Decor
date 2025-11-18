@@ -2,8 +2,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  // AQUI VAI O NOME DO SEU REPOSITÓRIO NO GITHUB (entre barras)
-  // Exemplo: se seu repo é 'projeto-loja', fica base: '/projeto-loja/'
+  // O nome do seu repositório: Jaguaribe_Decor
   base: '/Jaguaribe_Decor/', 
   
   build: {
