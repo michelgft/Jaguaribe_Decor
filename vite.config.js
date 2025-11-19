@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-/* */
+
 export default defineConfig({
   base: '/Jaguaribe_Decor/',
   build: {
@@ -8,11 +8,14 @@ export default defineConfig({
     sourcemap: false,
     rollupOptions: {
       input: {
-        main: './index.html'
+        main: './index.html',
+        detalhe: './detalhe.html',
+        cliente: './cliente.html'
       }
     }
   },
   server: {
-    host: true
+    host: true,
+    port: 3000
   }
 });
