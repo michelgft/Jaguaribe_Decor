@@ -6,7 +6,7 @@ export const produtos = [
         preco: 380.00,
         precoOriginal: 450.00,
         categoria: "sala-de-estar",
-        imagem: "/imagens/20.png",
+        imagem: "imagens/20.png",
         descricao: "Luminária de mesa articulada com design moderno...",
         avaliacao: 3.5
     },
@@ -16,7 +16,7 @@ export const produtos = [
         preco: 99.00,
         precoOriginal: 150.00,
         categoria: "sala-de-estar",
-        imagem: "/imagens/21.png",
+        imagem: "imagens/21.png",
         descricao: "Relógio de parede moderno...",
         avaliacao: 3.5
     },
@@ -26,7 +26,7 @@ export const produtos = [
         preco: 150.00,
         precoOriginal: 200.00,
         categoria: "jardim", 
-        imagem: "/imagens/06.png",
+        imagem: "imagens/06.png",
         descricao: "Conjunto de vasos mini...",
         avaliacao: 3.5
     },
@@ -36,7 +36,7 @@ export const produtos = [
         preco: 120.00,
         precoOriginal: 150.00,
         categoria: "sala-de-estar",
-        imagem: "/imagens/04.png",
+        imagem: "imagens/04.png",
         descricao: "Quadro moderno para decoração...",
         avaliacao: 4.5
     },
@@ -46,7 +46,7 @@ export const produtos = [
         preco: 100.00, 
         precoOriginal: 140.00,
         categoria: "cozinha",
-        imagem: "/imagens/05.png",
+        imagem: "imagens/05.png",
         descricao: "Xícara de porcelana premium...",
         avaliacao: 4.5
     },
@@ -56,7 +56,7 @@ export const produtos = [
         preco: 135.00,
         precoOriginal: 180.00,
         categoria: "sala-de-estar",
-        imagem: "/imagens/07.png",
+        imagem: "imagens/07.png",
         descricao: "Globo decorativo para mesa...",
         avaliacao: 4.5
     },
@@ -66,7 +66,7 @@ export const produtos = [
         preco: 1200.00,
         precoOriginal: 1500.00,
         categoria: "quarto",
-        imagem: "/imagens/18.png",
+        imagem: "imagens/18.png",
         descricao: "Cômoda premium de madeira maciça...",
         avaliacao: 4.8
     },
@@ -86,7 +86,7 @@ export const produtos = [
         preco: 280.00,
         precoOriginal: 350.00,
         categoria: "cozinha",
-        imagem: "/imagens/15.png",
+        imagem: "imagens/15.png",
         descricao: "Jogo completo de panelas antiaderentes...",
         avaliacao: 4.7
     },
