@@ -75,8 +75,6 @@ function scrollParaProdutos() {
 
 // REQUISITO: Tratamento de Eventos - Event Delegation para SPA
 document.addEventListener('DOMContentLoaded', function() {
-    // REMOVA APENAS ESTA LINHA:
-    // adicionarBadgeCarrinho();
     
     renderizarProdutos('todos'); // Renderização inicial
     
@@ -90,14 +88,14 @@ document.addEventListener('DOMContentLoaded', function() {
             scrollParaProdutos();
         }
         
-        // Botões de filtro
+        // filtro
         const btnFiltro = e.target.closest('.btn-filtro:not(.btn-voltar)');
         if (btnFiltro) {
             const filtro = btnFiltro.dataset.filtro;
             renderizarProdutos(filtro);
         }
         
-        // Botão voltar
+        // voltar
         if (e.target.closest('.btn-voltar')) {
             renderizarProdutos('todos');
         }
@@ -109,43 +107,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
-// REMOVA ESTA FUNÇÃO COMPLETA (o carrinho.js já faz isso):
-/*
-function adicionarBadgeCarrinho() {
-    const nav = document.querySelector('nav');
-    if (nav) {
-        const badge = document.createElement('div');
-        badge.id = 'carrinho-badge';
-        badge.style.cssText = `
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #1d9d74;
-            color: white;
-            border-radius: 50%;
-            width: 25px;
-            height: 25px;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            font-weight: bold;
-        `;
-        nav.style.position = 'relative';
-        nav.appendChild(badge);
-        
-        carrinho.atualizarBadge();
-    }
-}
-*/
-
-// REQUISITO: Programação Funcional - Exemplo adicional com reduce()
+// Programação Funcional
 export function calcularDescontoTotal(produtos) {
     return produtos.reduce((total, produto) => {
         return total + (produto.precoOriginal - produto.preco);
     }, 0);
 }
-
-// Exportar função para uso em outros módulos
 export { renderizarProdutos };
