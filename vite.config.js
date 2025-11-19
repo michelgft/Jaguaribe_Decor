@@ -9,8 +9,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './index.html',
-        detalhe: './detalhe.html',
-        cliente: './cliente.html'
       }
     }
   },
