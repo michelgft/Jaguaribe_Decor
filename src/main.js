@@ -1,4 +1,4 @@
-import './style.css';
+// import './style.css';
 import { carrinho } from './carrinho.js';
 import { produtos, filtrarPorCategoria, mapearProdutosParaHTML } from './store.js';
 
