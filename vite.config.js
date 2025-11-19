@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 /* */
 export default defineConfig({
-  base: './',
+  base: '/Jaguaribe_Decor/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
