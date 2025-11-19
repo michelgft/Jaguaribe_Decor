@@ -75,7 +75,9 @@ function scrollParaProdutos() {
 
 // REQUISITO: Tratamento de Eventos - Event Delegation para SPA
 document.addEventListener('DOMContentLoaded', function() {
-    adicionarBadgeCarrinho();
+    // REMOVA APENAS ESTA LINHA:
+    // adicionarBadgeCarrinho();
+    
     renderizarProdutos('todos'); // Renderização inicial
     
     // Event delegation para cards de categoria
@@ -108,7 +110,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Adicionar badge do carrinho no header
+// REMOVA ESTA FUNÇÃO COMPLETA (o carrinho.js já faz isso):
+/*
 function adicionarBadgeCarrinho() {
     const nav = document.querySelector('nav');
     if (nav) {
@@ -135,6 +138,7 @@ function adicionarBadgeCarrinho() {
         carrinho.atualizarBadge();
     }
 }
+*/
 
 // REQUISITO: Programação Funcional - Exemplo adicional com reduce()
 export function calcularDescontoTotal(produtos) {
