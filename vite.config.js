@@ -9,7 +9,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './index.html',
-        detalhe: './index.html',
+        detalhe: './detalhe.html',
       }
     }
   },
