@@ -492,16 +492,17 @@ export const produtos = [
         avaliacao: 4.7
     },
 ];
-// REQUISITO: Programação Funcional - Array.filter()
+// Array.filter()
 export function filtrarPorCategoria(categoria) {
     return produtos.filter(produto => produto.categoria === categoria);
 }
 
+// Array.map() 
 // REQUISITO: Programação Funcional - Array.map()  
 export function mapearProdutosParaHTML(produtosArray) {
     return produtosArray.map(produto => `
         <div class="produto-card">
-            <a href="/detalhe.html?id=${produto.id}">
+            <a href="detalhe.html?id=${produto.id}">
                 <img src="${produto.imagem}" alt="${produto.nome}">
             </a>
             <h3>${produto.nome}</h3>
@@ -509,10 +510,14 @@ export function mapearProdutosParaHTML(produtosArray) {
             <div class="avaliacao">
                 ${gerarEstrelas(produto.avaliacao)}
             </div>
-            <button class="btn-adicionar-carrinho" data-id="${produto.id}">
-                Adicionar ao Carrinho
-            </button>
-            <a href="<a href="/detalhe.html?id=${produto.id}">" class="btn">Ver detalhes</a>
+            <div class="botoes-container">
+                <button class="btn-adicionar-carrinho" data-id="${produto.id}">
+                    🛒 Adicionar ao Carrinho
+                </button>
+                <a href="detalhe.html?id=${produto.id}" class="btn-detalhes">
+                    🔍 Ver detalhes
+                </a>
+            </div>
         </div>
     `).join('');
 }

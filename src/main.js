@@ -15,7 +15,7 @@ function renderizarProdutos(categoria = 'todos') {
     const produtosLista = document.getElementById('produtos-lista');
     const produtosTitulo = document.getElementById('produtos-titulo');
     const btnVoltar = document.querySelector('.btn-voltar');
-    
+    npm
     if (!produtosLista) return;
     
     let produtosFiltrados;

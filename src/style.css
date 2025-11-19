@@ -399,7 +399,7 @@ nav a:hover {
   background-color: #ffffff;
 }
 
-/* Page Detalhe */
+/* pagina detalhes */
 
 .detalhe-produto {
   display: grid;
@@ -464,6 +464,61 @@ nav a:hover {
   display: block;
 }
 
+/* Estilos para botões de detalhes */
+.btn-detalhes {
+    display: inline-block;
+    background-color: #043f07;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.btn-detalhes:hover {
+    background-color: #1d9d74;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Melhorar a aparência dos cards de produto */
+.produto-card {
+    background-color: #f0f0f0;
+    padding-bottom: 10px;
+    text-align: center;
+    transition: 0.3s;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.produto-card:hover {
+    transform: scale(1.05);
+    background-color: #fff9c8;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.produto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.produto-card h3 {
+    margin-top: 15px;
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+.produto-card p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #1d9d74;
+    font-weight: bold;
+}
 /* Seção Contato */
 .contato {
   padding: 50px 30px;
@@ -855,6 +910,65 @@ footer .social-media a:hover {
 
 .btn-remover-carrinho:hover {
     color: #c0392b;
+}
+
+/* Botão Adicionar ao Carrinho - Verde mais claro */
+.btn-adicionar-carrinho {
+    display: inline-block;
+    background-color: #22c55e; /* Verde mais claro e moderno */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(34, 197, 94, 0.2);
+}
+
+.btn-adicionar-carrinho:hover {
+    background-color: #16a34a; /* Verde um pouco mais escuro no hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(34, 197, 94, 0.3);
+}
+
+.btn-adicionar-carrinho:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(34, 197, 94, 0.2);
+}
+
+/* Botão Ver Detalhes - Verde escuro original */
+.btn-detalhes {
+    display: inline-block;
+    background-color: #043f07; /* Verde escuro original */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(4, 63, 7, 0.2);
+}
+
+.btn-detalhes:hover {
+    background-color: #1d9d74; /* Verde médio no hover */
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(4, 63, 7, 0.3);
+}
+
+.btn-detalhes:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(4, 63, 7, 0.2);
 }
 
 /* Footer do Carrinho */
