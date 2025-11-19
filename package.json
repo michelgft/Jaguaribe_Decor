@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://seu-usuario.github.io/JAGUARIBE-DECOR-MAIN",
+  "homepage": "https://michelgft.github.io/Jaguaribe_Decor/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
