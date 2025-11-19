@@ -38,17 +38,15 @@ button {
 
 /* Header */
 
-header {
-  background-color: #f1f1f1; /* cor do site */
+/* header {
+  background-color: #f1f1f1;
   position: sticky;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 9999; /* suficiente para ficar acima do conteúdo */
-  /* opcional: sombra sutil para separar do conteúdo */
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-}
+  z-index: 9999;
+} */
 
 #logo img {
   max-width: 250px;
@@ -61,10 +59,62 @@ nav {
   padding: 10px 20px;
   width: 100%;
 }
-nav ul {
+
+/* === HEADER CONSISTENTE PARA TODAS AS PÁGINAS === */
+/* ADICIONE ESTE CÓDIGO NOVO: */
+
+.site-nav {
+  background-color: #f1f1f1 !important;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.site-nav ul {
+  background-color: #f1f1f1 !important;
+}
+
+.site-nav .bg-gray-50 {
+  background-color: #f1f1f1 !important;
+}
+
+.site-nav .md\:bg-white {
+  background-color: #f1f1f1 !important;
+}
+
+.site-nav .dark\:bg-gray-800 {
+  background-color: #f1f1f1 !important;
+}
+
+.site-nav .md\:dark\:bg-gray-900 {
+  background-color: #f1f1f1 !important;
+}
+
+/* Garantir que o container do nav tenha fundo consistente */
+.site-nav .max-w-screen-xl {
   background-color: #f1f1f1;
 }
 
+.site-nav a {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: #132f28;
+  margin: 0 29px;
+  transition: color 0.3s ease;
+}
+
+.site-nav a:hover {
+  color: #1d9d74;
+}
+/* nav ul {
+  background-color: #f1f1f1;
+}
+*/
 nav a {
   font-size: 16px;
   font-weight: 500;
