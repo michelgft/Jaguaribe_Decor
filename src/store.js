@@ -76,7 +76,7 @@ export const produtos = [
         preco: 450.00,
         precoOriginal: 550.00,
         categoria: "sala-de-estar", 
-        imagem: "/imagens/14.png",
+        imagem: "imagens/14.png",
         descricao: "Abajur de madeira moderno de madeira maciça...",
         avaliacao: 4.6
     },
@@ -96,7 +96,7 @@ export const produtos = [
         preco: 180.00,
         precoOriginal: 220.00,
         categoria: "jardim",
-        imagem: "public/imagens/19.png",
+        imagem: "imagens/19.png",
         descricao: "Vaso decorativo grande para plantas...",
         avaliacao: 4.4
     },
@@ -302,7 +302,7 @@ export const produtos = [
     },
     { 
         id: 31, 
-        nome: "Vaso de plantas suspenso",
+        nome: "Conjunto de Caixas de Plantio",
         preco: 280.00,
         precoOriginal: 350.00,
         categoria: "jardim",
