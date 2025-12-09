@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaguaribe Decor - Login</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Ícones do Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .brand-green {
+            color: #132f28;
+        }
+        .bg-brand-green {
+            background-color: #132f28;
+        }
+        .border-brand-green {
+            border-color: #132f28;
+        }
+        .focus-brand-green:focus {
+            border-color: #132f28;
+            box-shadow: 0 0 0 3px rgba(19, 47, 40, 0.1);
+        }
+        .btn-hover:hover {
+            background-color: #0f251f;
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+        .input-invalid {
+            border-color: #dc2626;
+        }
+        .input-valid {
+            border-color: #16a34a;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="w-full max-w-md">
+        <!-- Logo e título -->
+        <div class="text-center mb-10">
+            <div class="flex justify-center items-center mb-4">
+                <div class="bg-brand-green p-3 rounded-full">
+                    <i class="fas fa-store text-white text-2xl"></i>
+                </div>
+            </div>
+            <h1 class="text-3xl font-bold brand-green">Jaguaribe Decor</h1>
+            <p class="text-gray-600 mt-2">Faça login para acessar sua conta</p>
+        </div>
+
+        <!-- Card de login -->
+        <div class="bg-white rounded-xl shadow-lg p-8">
+            <form id="loginForm" class="space-y-6">
+                <!-- Campo de e-mail -->
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">
+                        <i class="fas fa-envelope mr-2 brand-green"></i>E-mail
+                    </label>
+                    <div class="relative">
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email"
+                            placeholder="seu@email.com" 
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus-brand-green transition"
+                            required
+                        />
+                        <div class="absolute right-3 top-3">
+                            <i id="emailIcon" class="fas fa-circle text-gray-400 text-xs"></i>
+                        </div>
+                    </div>
+                    <p id="emailError" class="text-red-600 text-xs mt-1 hidden">
+                        <i class="fas fa-exclamation-circle mr-1"></i>Use um e-mail válido (exemplo: nome@provedor.com)
+                    </p>
+                    <p class="text-gray-500 text-xs mt-2">
+                        <i class="fas fa-info-circle mr-1"></i>Caracteres permitidos: letras, números, @, ., -, _
+                    </p>
+                </div>
+
+                <!-- Campo de senha -->
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700 mb-1">
+                        <i class="fas fa-lock mr-2 brand-green"></i>Senha
+                    </label>
+                    <div class="relative">
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password"
+                            placeholder="Digite sua senha" 
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus-brand-green transition"
+                            required
+                        />
+                        <div class="absolute right-3 top-3 flex items-center space-x-2">
+                            <i id="passwordIcon" class="fas fa-circle text-gray-400 text-xs"></i>
+                            <button type="button" id="togglePassword" class="text-gray-500">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <p id="passwordError" class="text-red-600 text-xs mt-1 hidden">
+                        <i class="fas fa-exclamation-circle mr-1"></i>A senha deve ter 8+ caracteres com letras, números e símbolos
+                    </p>
+                    <p class="text-gray-500 text-xs mt-2">
+                        <i class="fas fa-info-circle mr-1"></i>Caracteres permitidos: letras, números, !@#$%^&*()_+-=
+                    </p>
+                    
+                    <!-- Indicador de força da senha -->
+                    <div class="mt-3">
+                        <div class="flex justify-between mb-1">
+                            <span class="text-xs text-gray-600">Força da senha:</span>
+                            <span id="passwordStrength" class="text-xs font-medium">Baixa</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div id="passwordStrengthBar" class="bg-red-500 h-2 rounded-full w-1/4"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lembrar de mim e esqueci a senha -->
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <input 
+                            type="checkbox" 
+                            id="remember" 
+                            name="remember"
+                            class="h-4 w-4 text-brand-green focus:ring-brand-green border-gray-300 rounded"
+                        />
+                        <label for="remember" class="ml-2 block text-sm text-gray-700">
+                            Lembrar de mim
+                        </label>
+                    </div>
+                    <a href="#" class="text-sm font-medium brand-green hover:underline">
+                        Esqueceu a senha?
+                    </a>
+                </div>
+
+                <!-- Botão de login -->
+                <button 
+                    type="submit" 
+                    id="submitBtn"
+                    class="w-full bg-brand-green text-white font-medium py-3 px-4 rounded-lg btn-hover transition duration-300 flex justify-center items-center"
+                >
+                    <i class="fas fa-sign-in-alt mr-2"></i> Entrar
+                </button>
+
+                <!-- Link para cadastro -->
+                <div class="text-center">
+                    <p class="text-sm text-gray-600">
+                        Não tem uma conta? 
+                        <a href="#" class="font-medium brand-green hover:underline">Cadastre-se</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Mensagem de sucesso (inicialmente oculta) -->
+        <div id="successMessage" class="hidden mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+            <div class="flex items-center">
+                <i class="fas fa-check-circle text-green-600 mr-2"></i>
+                <p class="text-green-800 font-medium">Login realizado com sucesso! Redirecionando...</p>
+            </div>
+        </div>
+
+        <!-- Informações de segurança -->
+        <div class="mt-8 text-center text-xs text-gray-500">
+            <p><i class="fas fa-shield-alt mr-1"></i> Este site é protegido por criptografia e políticas de segurança de dados.</p>
+            <p class="mt-1">Projeto de Segurança de Dados - Jaguaribe Decor</p>
+        </div>
+    </div>
+
+    <script>
+        // Elementos do DOM
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const emailError = document.getElementById('emailError');
+        const passwordError = document.getElementById('passwordError');
+        const emailIcon = document.getElementById('emailIcon');
+        const passwordIcon = document.getElementById('passwordIcon');
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordStrength = document.getElementById('passwordStrength');
+        const passwordStrengthBar = document.getElementById('passwordStrengthBar');
+        const loginForm = document.getElementById('loginForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const successMessage = document.getElementById('successMessage');
+
+        // Expressões regulares para validação
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        // Senha: mínimo 8 caracteres, pelo menos 1 letra, 1 número e 1 caractere especial
+        const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?])[A-Za-z\d!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]{8,}$/;
+
+        // Caracteres válidos para cada campo
+        const validEmailChars = /^[a-zA-Z0-9@._%-]*$/;
+        const validPasswordChars = /^[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
+
+        // Validar campo de e-mail em tempo real
+        emailInput.addEventListener('input', function() {
+            const email = emailInput.value;
+            
+            // Verifica caracteres válidos
+            if (!validEmailChars.test(email)) {
+                emailInput.classList.add('input-invalid');
+                emailInput.classList.remove('input-valid');
+                emailIcon.classList.remove('fa-check-circle', 'text-green-500');
+                emailIcon.classList.add('fa-times-circle', 'text-red-500');
+                return;
+            }
+            
+            // Verifica formato válido de e-mail
+            if (emailRegex.test(email)) {
+                emailInput.classList.remove('input-invalid');
+                emailInput.classList.add('input-valid');
+                emailIcon.classList.remove('fa-times-circle', 'text-red-500');
+                emailIcon.classList.add('fa-check-circle', 'text-green-500');
+                emailError.classList.add('hidden');
+            } else if (email.length > 0) {
+                emailInput.classList.remove('input-valid');
+                emailInput.classList.add('input-invalid');
+                emailIcon.classList.remove('fa-check-circle', 'text-green-500');
+                emailIcon.classList.add('fa-times-circle', 'text-red-500');
+                
+                if (email.length > 3) {
+                    emailError.classList.remove('hidden');
+                }
+            } else {
+                emailInput.classList.remove('input-invalid', 'input-valid');
+                emailIcon.classList.remove('fa-check-circle', 'fa-times-circle', 'text-green-500', 'text-red-500');
+                emailIcon.classList.add('fa-circle', 'text-gray-400');
+                emailError.classList.add('hidden');
+            }
+        });
+
+        // Validar campo de senha em tempo real
+        passwordInput.addEventListener('input', function() {
+            const password = passwordInput.value;
+            
+            // Verifica caracteres válidos
+            if (!validPasswordChars.test(password)) {
+                passwordInput.classList.add('input-invalid');
+                passwordInput.classList.remove('input-valid');
+                passwordIcon.classList.remove('fa-check-circle', 'text-green-500');
+                passwordIcon.classList.add('fa-times-circle', 'text-red-500');
+                updatePasswordStrength(0);
+                return;
+            }
+            
+            // Verifica força da senha
+            const strength = checkPasswordStrength(password);
+            updatePasswordStrength(strength);
+            
+            // Verifica formato válido de senha
+            if (passwordRegex.test(password)) {
+                passwordInput.classList.remove('input-invalid');
+                passwordInput.classList.add('input-valid');
+                passwordIcon.classList.remove('fa-times-circle', 'text-red-500');
+                passwordIcon.classList.add('fa-check-circle', 'text-green-500');
+                passwordError.classList.add('hidden');
+            } else if (password.length > 0) {
+                passwordInput.classList.remove('input-valid');
+                passwordInput.classList.add('input-invalid');
+                passwordIcon.classList.remove('fa-check-circle', 'text-green-500');
+                passwordIcon.classList.add('fa-times-circle', 'text-red-500');
+                
+                if (password.length > 5) {
+                    passwordError.classList.remove('hidden');
+                }
+            } else {
+                passwordInput.classList.remove('input-invalid', 'input-valid');
+                passwordIcon.classList.remove('fa-check-circle', 'fa-times-circle', 'text-green-500', 'text-red-500');
+                passwordIcon.classList.add('fa-circle', 'text-gray-400');
+                passwordError.classList.add('hidden');
+            }
+        });
+
+        // Mostrar/ocultar senha
+        togglePassword.addEventListener('click', function() {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            
+            // Alternar ícone do olho
+            const eyeIcon = togglePassword.querySelector('i');
+            if (type === 'text') {
+                eyeIcon.classList.remove('fa-eye');
+                eyeIcon.classList.add('fa-eye-slash');
+            } else {
+                eyeIcon.classList.remove('fa-eye-slash');
+                eyeIcon.classList.add('fa-eye');
+            }
+        });
+
+        // Verificar força da senha
+        function checkPasswordStrength(password) {
+            let strength = 0;
+            
+            // Comprimento mínimo
+            if (password.length >= 8) strength += 1;
+            if (password.length >= 12) strength += 1;
+            
+            // Letras maiúsculas e minúsculas
+            if (/[a-z]/.test(password) && /[A-Z]/.test(password)) strength += 1;
+            
+            // Números
+            if (/\d/.test(password)) strength += 1;
+            
+            // Caracteres especiais
+            if (/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)) strength += 1;
+            
+            return strength;
+        }
+
+        // Atualizar indicador de força da senha
+        function updatePasswordStrength(strength) {
+            let strengthText = '';
+            let strengthColor = '';
+            let width = '0%';
+            
+            switch(strength) {
+                case 0:
+                case 1:
+                    strengthText = 'Muito fraca';
+                    strengthColor = 'bg-red-500';
+                    width = '25%';
+                    break;
+                case 2:
+                    strengthText = 'Fraca';
+                    strengthColor = 'bg-orange-500';
+                    width = '35%';
+                    break;
+                case 3:
+                    strengthText = 'Média';
+                    strengthColor = 'bg-yellow-500';
+                    width = '50%';
+                    break;
+                case 4:
+                    strengthText = 'Forte';
+                    strengthColor = 'bg-green-400';
+                    width = '75%';
+                    break;
+                case 5:
+                    strengthText = 'Muito forte';
+                    strengthColor = 'bg-green-600';
+                    width = '100%';
+                    break;
+            }
+            
+            passwordStrength.textContent = strengthText;
+            passwordStrengthBar.className = `${strengthColor} h-2 rounded-full transition-all duration-300`;
+            passwordStrengthBar.style.width = width;
+        }
+
+        // Processar envio do formulário
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = emailInput.value;
+            const password = passwordInput.value;
+            
+            // Validação final antes de enviar
+            let isValid = true;
+            
+            if (!emailRegex.test(email)) {
+                emailInput.classList.add('input-invalid');
+                emailError.classList.remove('hidden');
+                isValid = false;
+            }
+            
+            if (!passwordRegex.test(password)) {
+                passwordInput.classList.add('input-invalid');
+                passwordError.classList.remove('hidden');
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // Simular envio do formulário
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Processando...';
+                
+                // Simular chamada de API
+                setTimeout(() => {
+                    successMessage.classList.remove('hidden');
+                    submitBtn.innerHTML = '<i class="fas fa-check mr-2"></i> Login realizado!';
+                    
+                    // Reset após alguns segundos (simulação de redirecionamento)
+                    setTimeout(() => {
+                        // Em um sistema real, aqui seria o redirecionamento
+                        alert('Redirecionando para o painel da Jaguaribe Decor...');
+                        
+                        // Reset do formulário para demonstração
+                        loginForm.reset();
+                        emailInput.classList.remove('input-invalid', 'input-valid');
+                        passwordInput.classList.remove('input-invalid', 'input-valid');
+                        emailIcon.className = 'fas fa-circle text-gray-400 text-xs';
+                        passwordIcon.className = 'fas fa-circle text-gray-400 text-xs';
+                        passwordStrength.textContent = 'Baixa';
+                        passwordStrengthBar.className = 'bg-red-500 h-2 rounded-full w-1/4';
+                        successMessage.classList.add('hidden');
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = '<i class="fas fa-sign-in-alt mr-2"></i> Entrar';
+                    }, 1500);
+                }, 1500);
+            } else {
+                // Adicionar efeito de shake nos campos inválidos
+                const invalidInputs = document.querySelectorAll('.input-invalid');
+                invalidInputs.forEach(input => {
+                    input.classList.add('animate-shake');
+                    setTimeout(() => {
+                        input.classList.remove('animate-shake');
+                    }, 500);
+                });
+            }
+        });
+
+        // Adicionar estilo de animação shake
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+                20%, 40%, 60%, 80% { transform: translateX(5px); }
+            }
+            .animate-shake {
+                animation: shake 0.5s ease-in-out;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
