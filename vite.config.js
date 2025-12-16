@@ -11,7 +11,6 @@ export default defineConfig({
         main: './index.html',
         detalhe: './detalhe.html',
         login: './login.html',
-        perfil: './cliente.html',
       }
     }
   },
