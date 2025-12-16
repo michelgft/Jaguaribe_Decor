@@ -1,184 +1,229 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jaguaribe Decor</title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jaguaribe Decor</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Kumar+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="./src/style.css" rel="stylesheet">
-  </head>
-  <body>
+<link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Kumar+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<link href="./src/style.css" rel="stylesheet">
+</head>
+<body>
 
-    <header>
-      <nav class="site-nav border-gray-200">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <div>
-            <a href="#" id="logo"><img src="imagens/JD-logo-SemFundo.png" alt="Logo Deco"></a>
-          </div>
-          <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+<header>
+<nav class="site-nav border-gray-200">
+<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <div>
+        <a href="#" id="logo"><img src="imagens/JD-logo-SemFundo.png" alt="Logo Deco"></a>
+    </div>
+    
+    <!-- Botões para mobile (visíveis apenas em telas pequenas) -->
+    <div class="flex items-center gap-2 md:hidden">
+        <!-- Botão Carrinho Mobile -->
+        <button class="btn-carrinho p-2 text-gray-700 hover:text-green-600">
+            <i class="fas fa-shopping-cart text-lg"></i>
+            <span id="carrinho-badge" class="carrinho-badge">0</span>
+        </button>
+        
+        <!-- Botões de Login/Cliente Mobile -->
+        <a href="login.html" class="px-3 py-2 bg-green-600 text-white rounded text-sm font-medium">
+            <i class="fas fa-sign-in-alt mr-1"></i> Login
+        </a>
+        <a href="cliente.html" class="px-3 py-2 bg-gray-800 text-white rounded text-sm font-medium">
+            <i class="fas fa-user mr-1"></i> Cliente
+        </a>
+        
+        <!-- Botão Menu Hamburguer -->
+        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
             </svg>
-          </button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-14 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-              <li>
-                <a href="#sobre" class="block py-2 px-3 text-white bg-#f1f1f1-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Sobre</a>
-              </li>
-              <li>
-                <a href="#produtos" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Produtos</a>
-              </li>
-              <li>
-                <a href="#destaque" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Destaque</a>
-              </li>
-              <li>
-                <a href="#contato" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contato</a>
-              </li>
+        </button>
+    </div>
+
+    <!-- Menu Desktop -->
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <div class="flex items-center justify-between">
+            <!-- Menu de navegação principal -->
+            <ul class="font-medium flex flex-col md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+                <li>
+                    <a href="#sobre" class="block py-2 px-3 text-gray-700 hover:text-green-600 md:p-0 transition-colors">Sobre</a>
+                </li>
+                <li>
+                    <a href="#produtos" class="block py-2 px-3 text-gray-700 hover:text-green-600 md:p-0 transition-colors">Produtos</a>
+                </li>
+                <li>
+                    <a href="#destaque" class="block py-2 px-3 text-gray-700 hover:text-green-600 md:p-0 transition-colors">Destaque</a>
+                </li>
+                <li>
+                    <a href="#contato" class="block py-2 px-3 text-gray-700 hover:text-green-600 md:p-0 transition-colors">Contato</a>
+                </li>
             </ul>
-          </div>
-        </div>
-      </nav>
-    </header>      
-
-    <main class="container">
-  
-      <section class="topo" id="sobre">
-        <div class="left">
-          <h1>Sofisticação e<br>exclusividade<br>para o seu lar.</h1>
-          <p>Jaguaribe Decor, onde o design<br>e a funcionalidade se encontram. </p>
-          <img class="app" src="imagens/Mobile App Store Badges.svg" alt="">
-        </div>
-        <div class="right">
-          <img src="imagens/cactoelement03.png" alt="Decoração Cactos">
-        </div>
-      </section>
-
-
-      <section id="sobre-jd" class="sobre">
-        <h2>Sobre</h2>
-        <p>Jaguaribe Decor é uma empresa especializada em decoração para ambientes internos e externos. Nosso objetivo é transformar espaços com produtos que trazem personalidade e harmonia para cada cantinho. Oferecemos uma seleção curada de itens de decoração, sempre com qualidade e estilo, para que cada cliente tenha a oportunidade de expressar sua própria identidade.</p>
-      </section>        
-
-      <!-- Seção Produtos - MODIFICADA PARA SPA -->
-      <section id="produtos" class="produtos">
-        <div class="produtos-header">
-          <h2 id="produtos-titulo">Nossos Produtos</h2>
-          <div class="filtros-container">
-            <button class="btn-filtro active" data-filtro="todos">Todos</button>
-            <button class="btn-filtro" data-filtro="sala-de-estar">Sala</button>
-            <button class="btn-filtro" data-filtro="quarto">Quarto</button>
-            <button class="btn-filtro" data-filtro="cozinha">Cozinha</button>
-            <button class="btn-filtro" data-filtro="jardim">Jardim</button>
-            <button class="btn-filtro btn-voltar" style="display: none;">← Voltar</button>
-          </div>
-        </div>
-        <div class="produtos-lista" id="produtos-lista">
-          <!-- Produtos serão carregados dinamicamente -->
-        </div>
-      </section>
-
-      <!-- Galeria -->
-      <section class="galeria">
-        <figure class="item foto-01">
-          <img class="galeria-img" src="imagens/vaso-foto-texto.png" alt="img-01">
-        </figure>
-        <figure class="item foto-03">
-          <img class="galeria-img" src="imagens/02.png" alt="img-02">
-        </figure>
-        <figure class="item foto-04">
-          <img class="galeria-img" src="imagens/13.png" alt="img-03">
-        </figure>
-      </section>
-
-      <!-- Seção Produtos em Destaque -->
-      <section id="destaque" class="produtos-destaque">
-        <h2 id="destaque_p">Produtos Em Destaques</h2>
-        <div class="produtos-lista">
-          <div class="produto-card destaque">
-            <img src="imagens/04.png" alt="Produto 2">
-            <h3>Quadro Moderno</h3>
-            <p>De R$ 150,00 por R$ 120,00</p>
-            <div class="avaliacao">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
+            
+            <!-- Botões de ação (alinhados à direita) -->
+            <!-- Botão Carrinho Desktop -->
+            <div class="carrinho-container relative">
+              <button class="btn-carrinho flex items-center gap-2 p-2 text-gray-700 hover:text-green-600 transition-colors">
+                <i class="fas fa-shopping-cart text-xl"></i>
+                <span class="hidden lg:inline font-medium">Carrinho</span>
+                <span id="carrinho-badge-desktop" class="carrinho-badge">0</span>
+              </button>
             </div>
-            <button class="btn-adicionar-carrinho" data-id="4">Adicionar ao Carrinho</button>
-            <a href="detalhe.html?id=4" class="btn-detalhes">Ver detalhes</a>
-          </div>
-
-          <div class="produto-card destaque">
-            <img src="imagens/05.png" alt="Produto 2">
-            <h3>Xícara Porcelana</h3>
-            <p>De R$ 140,00 por R$ 100,00</p>
-            <div class="avaliacao">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
+                
+                <!-- Botões de Login/Cliente Desktop -->
+                <div class="flex items-center gap-3">
+                    <a href="login.html" class="px-4 py-2 text-white rounded-lg font-medium flex items-center gap-2">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>Login/Registro</span>
+                    </a>
+                    <a href="cliente.html" class="px-4 py-2 text-white rounded-lg font-medium flex items-center gap-2">
+                        <i class="fas fa-user"></i>
+                        <span>Perfil</span>
+                    </a>
+                </div>
             </div>
-            <button class="btn-adicionar-carrinho" data-id="5">Adicionar ao Carrinho</button>
-            <a href="detalhe.html?id=5" class="btn-detalhes">Ver detalhes</a>
-          </div>
-
-          <div class="produto-card destaque">
-            <img src="imagens/07.png" alt="Produto 2">
-            <h3>Globo de Mesa</h3>
-            <p>De R$ 180,00 por R$ 135,00</p>
-            <div class="avaliacao">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-            </div>
-            <button class="btn-adicionar-carrinho" data-id="6">Adicionar ao Carrinho</button>
-            <a href="detalhe.html?id=6" class="btn-detalhes">Ver detalhes</a>
-          </div>
         </div>
-      </section>
+    </div>
+</div>
+</nav>
+</header> 
 
-      <!-- Seção Contato -->
-      <section id="contato" class="contato">
-        <div class="form">
-          <h2>Entre em Contato</h2>
-          <form action="#">
-            <input type="text" name="nome" placeholder="Seu nome" required>
-            <input type="email" name="email" placeholder="Seu e-mail" required>
-            <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
-            <button type="submit">Enviar</button>
-          </form>
-        </div>
+<main class="container">
+<section class="topo" id="sobre">
+<div class="left">
+<h1>Sofisticação e<br>exclusividade<br>para o seu lar.</h1>
+<p>Jaguaribe Decor, onde o design<br>e a funcionalidade se encontram. </p>
+<img class="app" src="imagens/Mobile App Store Badges.svg" alt="">
+</div>
+<div class="right">
+<img src="imagens/cactoelement03.png" alt="Decoração Cactos">
+</div>
+</section>
 
-        <div class="map">
-          <h2>Localização</h2>
-          <div id="mapa">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.9173254617244!2d-34.87604522610894!3d-7.135558969986364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ace810852ae4f1%3A0xaf5445223401f2bb!2sIFPB%20-%20Campus%20Jo%C3%A3o%20Pessoa!5e0!3m2!1spt-BR!2sbr!4v1737316018999!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>   
-        </div>
-      </section>
-    </main>
+<section id="sobre-jd" class="sobre">
+<h2>Sobre</h2>
+<p>Jaguaribe Decor é uma empresa especializada em decoração para ambientes internos e externos. Nosso objetivo é transformar espaços com produtos que trazem personalidade e harmonia para cada cantinho. Oferecemos uma seleção curada de itens de decoração, sempre com qualidade e estilo, para que cada cliente tenha a oportunidade de expressar sua própria identidade.</p>
+</section> 
 
-    <!-- Rodapé -->
-    <footer>
-      <div class="informacoes">
-        <p>&copy; 2025 Jaguaribe Decor.</p>
-        <div class="social-media">
-          <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-          <a href="https://pinterest.com" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
-        </div>
-      </div>
-    </footer>   
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-    <script type="module" src="./src/main.js"></script>
-  </body>
+<!-- Seção Produtos - MODIFICADA PARA SPA -->
+<section id="produtos" class="produtos">
+<div class="produtos-header">
+<h2 id="produtos-titulo">Nossos Produtos</h2>
+<div class="filtros-container">
+<button class="btn-filtro active" data-filtro="todos">Todos</button>
+<button class="btn-filtro" data-filtro="sala-de-estar">Sala</button>
+<button class="btn-filtro" data-filtro="quarto">Quarto</button>
+<button class="btn-filtro" data-filtro="cozinha">Cozinha</button>
+<button class="btn-filtro" data-filtro="jardim">Jardim</button>
+<button class="btn-filtro btn-voltar" style="display: none;">← Voltar</button>
+</div>
+</div>
+<div class="produtos-lista" id="produtos-lista">
+<!-- Produtos serão carregados dinamicamente -->
+</div>
+</section>
+
+<!-- Galeria -->
+<section class="galeria">
+<figure class="item foto-01">
+<img class="galeria-img" src="imagens/vaso-foto-texto.png" alt="img-01">
+</figure>
+<figure class="item foto-03">
+<img class="galeria-img" src="imagens/02.png" alt="img-02">
+</figure>
+<figure class="item foto-04">
+<img class="galeria-img" src="imagens/13.png" alt="img-03">
+</figure>
+</section>
+
+<!-- Seção Produtos em Destaque -->
+<section id="destaque" class="produtos-destaque">
+<h2 id="destaque_p">Produtos Em Destaques</h2>
+<div class="produtos-lista">
+<div class="produto-card destaque">
+<img src="imagens/04.png" alt="Produto 2">
+<h3>Quadro Moderno</h3>
+<p>De R$ 150,00 por R$ 120,00</p>
+<div class="avaliacao">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star-half-alt"></i>
+</div>
+<button class="btn-adicionar-carrinho" data-id="4">Adicionar ao Carrinho</button>
+<a href="detalhe.html?id=4" class="btn-detalhes">Ver detalhes</a>
+</div>
+
+<div class="produto-card destaque">
+<img src="imagens/05.png" alt="Produto 2">
+<h3>Xícara Porcelana</h3>
+<p>De R$ 140,00 por R$ 100,00</p>
+<div class="avaliacao">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star-half-alt"></i>
+</div>
+<button class="btn-adicionar-carrinho" data-id="5">Adicionar ao Carrinho</button>
+<a href="detalhe.html?id=5" class="btn-detalhes">Ver detalhes</a>
+</div>
+
+<div class="produto-card destaque">
+<img src="imagens/07.png" alt="Produto 2">
+<h3>Globo de Mesa</h3>
+<p>De R$ 180,00 por R$ 135,00</p>
+<div class="avaliacao">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star-half-alt"></i>
+</div>
+<button class="btn-adicionar-carrinho" data-id="6">Adicionar ao Carrinho</button>
+<a href="detalhe.html?id=6" class="btn-detalhes">Ver detalhes</a>
+</div>
+</div>
+</section>
+
+<!-- Seção Contato -->
+<section id="contato" class="contato">
+<div class="form">
+<h2>Entre em Contato</h2>
+<form action="#">
+<input type="text" name="nome" placeholder="Seu nome" required>
+<input type="email" name="email" placeholder="Seu e-mail" required>
+<textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+<button type="submit">Enviar</button>
+</form>
+</div>
+
+<div class="map">
+<h2>Localização</h2>
+<div id="mapa">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.9173254617244!2d-34.87604522610894!3d-7.135558969986364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ace810852ae4f1%3A0xaf5445223401f2bb!2sIFPB%20-%20Campus%20Jo%C3%A3o%20Pessoa!5e0!3m2!1spt-BR!2sbr!4v1737316018999!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div> 
+</div>
+</section>
+</main>
+
+<!-- Rodapé -->
+<footer>
+<div class="informacoes">
+<p>&copy; 2025 Jaguaribe Decor.</p>
+<div class="social-media">
+<a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+<a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+<a href="https://pinterest.com" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
+</div>
+</div>
+</footer> 
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+<script type="module" src="./src/main.js"></script>
+</body>
 </html>

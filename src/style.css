@@ -128,6 +128,7 @@ nav a:hover {
   color: #1d9d74;
 }
 
+
 /* Seção Topo */
 .topo {
   display: grid;
@@ -250,6 +251,110 @@ nav a:hover {
     animation: pulse 2s infinite;
 }
 
+/* Ajustes para o botão do carrinho com texto */
+.btn-carrinho {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.btn-carrinho:hover {
+    background-color: #f3f4f6;
+}
+
+.btn-carrinho i {
+    font-size: 1.25rem;
+    color: #374151;
+    min-width: 24px; /* Garante espaço fixo para o ícone */
+}
+
+.btn-carrinho:hover i {
+    color: #16a34a;
+}
+
+.btn-carrinho span:not(.carrinho-badge) {
+    font-weight: 500;
+    font-size: 14px;
+    color: #374151;
+    white-space: nowrap;
+}
+
+.btn-carrinho:hover span:not(.carrinho-badge) {
+    color: #16a34a;
+}
+
+/* Ajuste do badge para acomodar o texto */
+.carrinho-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background: #ef4444;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 2px solid #f1f1f1;
+}
+
+/* Ajustes específicos para desktop */
+@media (min-width: 769px) {
+    .btn-carrinho span:not(.carrinho-badge) {
+        display: inline; /* Sempre mostra no desktop */
+    }
+    
+    /* Ajuste da posição do badge quando tem texto */
+    .btn-carrinho .carrinho-badge {
+        top: -4px;
+        right: 0px;
+    }
+}
+
+/* Ajustes específicos para mobile */
+@media (max-width: 768px) {
+    /* No topo mobile */
+    .md\:hidden .btn-carrinho {
+        padding: 6px 8px;
+    }
+    
+    .md\:hidden .btn-carrinho span:not(.carrinho-badge) {
+        font-size: 12px;
+    }
+    
+    /* No dropdown mobile */
+    #navbar-default .btn-carrinho {
+        justify-content: center;
+        width: 100%;
+        padding: 12px 16px;
+    }
+    
+    #navbar-default .btn-carrinho span:not(.carrinho-badge) {
+        font-size: 14px;
+    }
+}
+
+/* Ajuste para telas muito pequenas */
+@media (max-width: 360px) {
+    .md\:hidden .btn-carrinho span:not(.carrinho-badge) {
+        display: none; /* Esconde texto em telas muito pequenas */
+    }
+    
+    .md\:hidden .btn-carrinho {
+        padding: 6px;
+    }
+}
 @keyframes pulse {
     0%, 100% {
         transform: scale(1);
@@ -1239,4 +1344,5 @@ footer .social-media a:hover {
   .detalhe-mais h3 {
     display: none;
   }
+  
 }
