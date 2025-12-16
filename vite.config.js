@@ -10,6 +10,8 @@ export default defineConfig({
       input: {
         main: './index.html',
         detalhe: './detalhe.html',
+        login: './login.html',
+        perfil: './cliente.html',
       }
     }
   },
