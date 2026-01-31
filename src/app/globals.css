@@ -2,20 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Apenas configurações globais essenciais */
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
 
-/* Garante que o scroll seja suave ao clicar nos links */
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Saira", sans-serif; /* Mantendo sua fonte original */
+  font-family: "Saira", sans-serif; 
   background-color: #ffffff;
-  color: #132f28; /* Sua cor de texto original */
+  color: #132f28; 
 }
