@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { supabase } from "../lib/supabase"; 
-import { ProductCard } from "../components/ProductCard"; 
+import { ProductCard } from "../components/ProductCard";
+import ContactSection from "../components/ContactSection"; 
 
 export default function Home() {
   const [produtos, setProdutos] = useState([]);
@@ -146,17 +147,7 @@ export default function Home() {
       </section>
 
 
-      <section id="contato" className="py-20 bg-white">
-        <div className="container mx-auto px-8 max-w-5xl text-center">
-          <h2 className="text-4xl font-bold text-gray-800 font-display mb-12">
-            Contato
-          </h2>
-          <div className="text-gray-600">
-            <p>contato@jaguaribedecor.com</p>
-            <p>(81) 99999-9999</p>
-          </div>
-        </div>
-      </section>
+      <ContactSection />
 
     </main>
   );
