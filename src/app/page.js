@@ -12,7 +12,7 @@ export default function Home() {
   const [category, setCategory] = useState('Todos');
   const { addToCart } = useCart();
 
-  const categorias = ['Todos', 'Sala', 'Cozinha', 'Quarto', 'Banheiro', 'Jardim'];
+  const categorias = ['Todos', 'Sala', 'Cozinha', 'Quarto', 'Jardim'];
 
   useEffect(() => {
     async function fetchProducts() {
