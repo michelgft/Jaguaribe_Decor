@@ -8,8 +8,6 @@ export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
-
-  
   useEffect(() => {
     const savedCart = localStorage.getItem('jaguaribe_cart');
     if (savedCart) {
@@ -21,16 +19,13 @@ export function CartProvider({ children }) {
     }
   }, []);
 
-
   useEffect(() => {
     localStorage.setItem('jaguaribe_cart', JSON.stringify(cart));
   }, [cart]);
 
-
   const addToCart = (product) => {
     setCart((prevCart) => {
       const itemExists = prevCart.find((item) => item.id === product.id);
-  
       
       if (itemExists) {
         return prevCart.map((item) =>
@@ -38,7 +33,6 @@ export function CartProvider({ children }) {
         );
       }
       
-      setIsCartOpen(true); 
       return [...prevCart, { ...product, quantity: 1 }];
     });
   };
