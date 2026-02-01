@@ -71,6 +71,7 @@ export default function ProdutoDetalhes() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        {/* Lado Esquerdo: Imagem */}
         <div className="relative rounded-2xl overflow-hidden shadow-lg bg-gray-100 border border-gray-100 h-[400px] md:h-[600px]">
           <img
             src={produto.image_url}
@@ -79,6 +80,7 @@ export default function ProdutoDetalhes() {
           />
         </div>
 
+        {/* Lado Direito: Informações */}
         <div className="flex flex-col h-full justify-center py-4">
           <span className="text-sm font-bold text-green-600 tracking-wider uppercase mb-2">
             {produto.category}
@@ -102,4 +104,13 @@ export default function ProdutoDetalhes() {
           <div className="flex gap-4">
             <button
               onClick={() => addToCart(produtoParaCarrinho)}
-              className="flex-1 bg-gray-900 hover:bg-green
+              className="flex-1 bg-gray-900 hover:bg-green-600 text-white text-lg font-bold py-4 px-8 rounded-full transition-all shadow-xl hover:shadow-green-200 active:scale-95 flex items-center justify-center gap-3"
+            >
+              Adicionar ao Carrinho
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
