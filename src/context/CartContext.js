@@ -1,43 +1,79 @@
 'use client';
 
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
 
-// 1. Cria o canal de comunicação
 const CartContext = createContext();
 
-// 2. Cria o componente que vai "abraçar" o site e fornecer os dados
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
-  // Função para adicionar produto
+
+  
+  useEffect(() => {
+    const savedCart = localStorage.getItem('jaguaribe_cart');
+    if (savedCart) {
+      try {
+        setCart(JSON.parse(savedCart));
+      } catch (error) {
+        localStorage.removeItem('jaguaribe_cart');
+      }
+    }
+  }, []);
+
+
+  useEffect(() => {
+    localStorage.setItem('jaguaribe_cart', JSON.stringify(cart));
+  }, [cart]);
+
+
   const addToCart = (product) => {
     setCart((prevCart) => {
-      // Verifica se o produto já está no carrinho
       const itemExists = prevCart.find((item) => item.id === product.id);
-
+  
+      
       if (itemExists) {
-        // Se já existe, só aumenta a quantidade (+1)
         return prevCart.map((item) =>
           item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
         );
       }
-
-      // Se é novo, adiciona ele com quantidade 1
+      
+      setIsCartOpen(true); 
       return [...prevCart, { ...product, quantity: 1 }];
     });
   };
+  
+  const removeFromCart = (productId) => {
+    setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
+  };
 
-  // Conta quantos itens tem no total (ex: 2 cadeiras + 1 mesa = 3 itens)
+  const toggleCart = () => setIsCartOpen(!isCartOpen); 
+  const closeCart = () => setIsCartOpen(false); 
+
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+  
+  const cartTotal = cart.reduce((total, item) => {
+    return total + (Number(item.price) * item.quantity);
+  }, 0);
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, cartCount }}>
+    <CartContext.Provider 
+      value={{ 
+        cart, 
+        addToCart, 
+        removeFromCart, 
+        cartCount, 
+        cartTotal,
+        isCartOpen,
+        toggleCart,
+        closeCart
+      }}
+    >
       {children}
     </CartContext.Provider>
   );
 }
 
-// 3. Hook para facilitar o uso nos outros arquivos
 export function useCart() {
   return useContext(CartContext);
 }
