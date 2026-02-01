@@ -16,22 +16,36 @@ export default function ProdutoDetalhes() {
 
   useEffect(() => {
     async function carregarDetalhes() {
-      if (!id) return;
+      // REQUISITO OWASP #1: Validação de Entrada
+      // Evita processar IDs maliciosos, vazios ou excessivamente longos
+      if (!id || typeof id !== 'string' || id.length > 50) {
+        setLoading(false);
+        return;
+      }
 
       setLoading(true);
       
-      const { data, error } = await supabase
-        .from('products')
-        .select('*')
-        .eq('id', id)
-        .single(); 
+      try {
+        const { data, error } = await supabase
+          .from('products')
+          .select('*')
+          .eq('id', id)
+          .single(); 
 
-      if (error) {
-        console.error(error);
-      } else {
-        setProduto(data);
+        // REQUISITO OWASP #7: Tratamento de Erro Seguro
+        // Não expomos o erro técnico do banco (SQL/Colunas) para o cliente
+        if (error) {
+          console.error("Log de segurança: Falha na requisição de produto."); 
+          setProduto(null);
+        } else {
+          setProduto(data);
+        }
+      } catch (err) {
+        // Captura falhas inesperadas de rede
+        setProduto(null);
+      } finally {
+        setLoading(false);
       }
-      setLoading(false);
     }
 
     carregarDetalhes();
@@ -71,7 +85,6 @@ export default function ProdutoDetalhes() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-        {/* Lado Esquerdo: Imagem */}
         <div className="relative rounded-2xl overflow-hidden shadow-lg bg-gray-100 border border-gray-100 h-[400px] md:h-[600px]">
           <img
             src={produto.image_url}
@@ -80,7 +93,6 @@ export default function ProdutoDetalhes() {
           />
         </div>
 
-        {/* Lado Direito: Informações */}
         <div className="flex flex-col h-full justify-center py-4">
           <span className="text-sm font-bold text-green-600 tracking-wider uppercase mb-2">
             {produto.category}
