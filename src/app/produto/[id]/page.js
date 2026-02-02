@@ -16,8 +16,7 @@ export default function ProdutoDetalhes() {
 
   useEffect(() => {
     async function carregarDetalhes() {
-      // REQUISITO OWASP #1: Validação de Entrada
-      // Evita processar IDs maliciosos, vazios ou excessivamente longos
+ 
       if (!id || typeof id !== 'string' || id.length > 50) {
         setLoading(false);
         return;
@@ -32,8 +31,7 @@ export default function ProdutoDetalhes() {
           .eq('id', id)
           .single(); 
 
-        // REQUISITO OWASP #7: Tratamento de Erro Seguro
-        // Não expomos o erro técnico do banco (SQL/Colunas) para o cliente
+
         if (error) {
           console.error("Log de segurança: Falha na requisição de produto."); 
           setProduto(null);
@@ -41,7 +39,7 @@ export default function ProdutoDetalhes() {
           setProduto(data);
         }
       } catch (err) {
-        // Captura falhas inesperadas de rede
+
         setProduto(null);
       } finally {
         setLoading(false);
