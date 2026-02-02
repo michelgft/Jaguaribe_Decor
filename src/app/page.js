@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabase';
 import Link from 'next/link';
 import { useCart } from '../context/CartContext';
+import ContactSection from "../components/ContactSection";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -125,6 +126,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <ContactSection />
     </main>
   );
 }
