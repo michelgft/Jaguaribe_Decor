@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabase';
 import Link from 'next/link';
-
+import ContactSection from "../components/ContactSection";
 export default function Home() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -156,6 +156,7 @@ export default function Home() {
         )}
 
       </div>
+      <ContactSection />
     </main>
   );
 }
