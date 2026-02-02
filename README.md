@@ -1,3 +1,5 @@
+# Jaguaribe Decor
+
 ## IFPB-CSTSI / Projeto PW2
 ### Aplicação web completa para uma loja de decoração
 
