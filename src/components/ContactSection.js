@@ -116,7 +116,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="font-medium text-gray-800">Endereço</p>
-                    <p className="text-gray-600">Recife, PE - Brasil</p>
+                    <p className="text-gray-600">João Pessoa, PB - Brasil</p>
                   </div>
                 </div>
 
